@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .gradle
 build/
 !gradle/wrapper/gradle-wrapper.jar
@@ -40,3 +41,23 @@ bin/
 
 ### Mac OS ###
 .DS_Store
+=======
+target/
+build
+out
+.gradle
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+.idea
+*.iml
+.DS_Store
+
+# Avoid ignoring Maven wrapper jar file (.jar files are usually ignored)
+!/.mvn/wrapper/maven-wrapper.jar
+>>>>>>> 087eaac91e6b1a96471e5ef595b2ab5621979fb8

@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+defaultTasks 'clean', 'test', 'aggregate'
+
+>>>>>>> 087eaac91e6b1a96471e5ef595b2ab5621979fb8
 repositories {
     mavenCentral()
     mavenLocal()
@@ -10,7 +15,11 @@ buildscript {
         }
     }
     dependencies {
+<<<<<<< HEAD
         classpath "net.serenity-bdd:serenity-gradle-plugin:4.1.14"
+=======
+        classpath "net.serenity-bdd:serenity-gradle-plugin:4.2.13"
+>>>>>>> 087eaac91e6b1a96471e5ef595b2ab5621979fb8
     }
 }
 
@@ -20,6 +29,7 @@ apply plugin: 'eclipse'
 apply plugin: 'idea'
 apply plugin: "net.serenity-bdd.serenity-gradle-plugin"
 
+<<<<<<< HEAD
 sourceCompatibility = 17
 targetCompatibility = 17
 
@@ -51,10 +61,42 @@ dependencies {
     testImplementation "net.serenity-bdd:serenity-saucelabs:${SERENITY_VERSION}"
     testImplementation 'io.github.bonigarcia:webdrivermanager:5.7.0'
 
+=======
+sourceCompatibility = 16
+targetCompatibility = 16
+
+ext {
+    serenity_version = '4.2.13'
+    junit_platform_launcher_version="1.11.4"
+    cucumber_junit_platform_engine_version="7.20.1"
+    junit_platform_suite_version="1.11.4"
+    junit_jupiter_engine_version="5.11.4"
+    junit_vintage_engine_version="5.11.4"
+    logback_classic_version="1.2.10"
+    assertj_core_version="3.23.1"
+}
+
+dependencies {
+    dependencies {
+        testImplementation "net.serenity-bdd:serenity-core:${serenity_version}"
+        testImplementation "net.serenity-bdd:serenity-cucumber:${serenity_version}"
+        testImplementation "net.serenity-bdd:serenity-screenplay:${serenity_version}"
+        testImplementation "net.serenity-bdd:serenity-screenplay-webdriver:${serenity_version}"
+        testImplementation "net.serenity-bdd:serenity-ensure:${serenity_version}"
+        testImplementation "org.junit.platform:junit-platform-launcher:${junit_platform_launcher_version}"
+        testImplementation "io.cucumber:cucumber-junit-platform-engine:${cucumber_junit_platform_engine_version}"
+        testImplementation "org.junit.platform:junit-platform-suite:${junit_platform_suite_version}"
+        testImplementation "org.junit.jupiter:junit-jupiter-engine:${junit_jupiter_engine_version}"
+        testImplementation "org.junit.vintage:junit-vintage-engine:${junit_vintage_engine_version}"
+        implementation "ch.qos.logback:logback-classic:${logback_classic_version}"
+        testImplementation "org.assertj:assertj-core:${assertj_core_version}"
+    }
+>>>>>>> 087eaac91e6b1a96471e5ef595b2ab5621979fb8
 }
 
 test {
     useJUnitPlatform()
+<<<<<<< HEAD
     systemProperties System.getProperties()
     maxParallelForks = 2
 }
@@ -65,8 +107,14 @@ serenity {
 
     // Specify the root directory of any Cucumber feature files
     requirementsDir = "src/test/resources/features"
+=======
+>>>>>>> 087eaac91e6b1a96471e5ef595b2ab5621979fb8
 }
 
 gradle.startParameter.continueOnFailure = true
 
+<<<<<<< HEAD
 test.finalizedBy(aggregate)
+=======
+test.finalizedBy(aggregate)
+>>>>>>> 087eaac91e6b1a96471e5ef595b2ab5621979fb8
