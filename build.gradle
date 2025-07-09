@@ -1,8 +1,5 @@
-<<<<<<< HEAD
-=======
 defaultTasks 'clean', 'test', 'aggregate'
 
->>>>>>> 087eaac91e6b1a96471e5ef595b2ab5621979fb8
 repositories {
     mavenCentral()
     mavenLocal()
@@ -15,11 +12,9 @@ buildscript {
         }
     }
     dependencies {
-<<<<<<< HEAD
         classpath "net.serenity-bdd:serenity-gradle-plugin:4.1.14"
-=======
+
         classpath "net.serenity-bdd:serenity-gradle-plugin:4.2.13"
->>>>>>> 087eaac91e6b1a96471e5ef595b2ab5621979fb8
     }
 }
 
@@ -29,7 +24,7 @@ apply plugin: 'eclipse'
 apply plugin: 'idea'
 apply plugin: "net.serenity-bdd.serenity-gradle-plugin"
 
-<<<<<<< HEAD
+
 sourceCompatibility = 17
 targetCompatibility = 17
 
@@ -44,6 +39,7 @@ ext {
 }
 
 dependencies {
+
     implementation "net.serenity-bdd:serenity-core:${SERENITY_VERSION}"
     implementation "net.serenity-bdd:serenity-junit:${SERENITY_VERSION}"
     implementation "net.serenity-bdd:serenity-junit5:${SERENITY_VERSION}"
@@ -61,7 +57,8 @@ dependencies {
     testImplementation "net.serenity-bdd:serenity-saucelabs:${SERENITY_VERSION}"
     testImplementation 'io.github.bonigarcia:webdrivermanager:5.7.0'
 
-=======
+}
+
 sourceCompatibility = 16
 targetCompatibility = 16
 
@@ -91,12 +88,12 @@ dependencies {
         implementation "ch.qos.logback:logback-classic:${logback_classic_version}"
         testImplementation "org.assertj:assertj-core:${assertj_core_version}"
     }
->>>>>>> 087eaac91e6b1a96471e5ef595b2ab5621979fb8
+
 }
 
 test {
     useJUnitPlatform()
-<<<<<<< HEAD
+
     systemProperties System.getProperties()
     maxParallelForks = 2
 }
@@ -107,14 +104,9 @@ serenity {
 
     // Specify the root directory of any Cucumber feature files
     requirementsDir = "src/test/resources/features"
-=======
->>>>>>> 087eaac91e6b1a96471e5ef595b2ab5621979fb8
+
 }
 
-gradle.startParameter.continueOnFailure = true
+    gradle.startParameter.continueOnFailure = true
 
-<<<<<<< HEAD
-test.finalizedBy(aggregate)
-=======
-test.finalizedBy(aggregate)
->>>>>>> 087eaac91e6b1a96471e5ef595b2ab5621979fb8
+    test.finalizedBy(aggregate)
