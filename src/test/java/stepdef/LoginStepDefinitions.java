@@ -19,11 +19,12 @@ public class LoginStepDefinitions {
     @Given("the user opens the login page")
         public void theUserOpensTheLoginPage(){
         OnStage.theActorCalled("User").wasAbleTo();
+
     }
+
     @When("they enter valid credentials")
         public void theyEnterValidcredentials(){
         OnStage.theActorInTheSpotlight().attemptsTo(Login.withCredentials("admin", "admin123"));
-
     }
 
     @Then("they should be redirected to the dashboard")
