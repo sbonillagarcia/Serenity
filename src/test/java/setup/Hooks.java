@@ -1,12 +1,12 @@
 package setup;
 
 import io.cucumber.java.Before;
+import io.github.bonigarcia.wdm.WebDriverManager;
 import net.serenitybdd.annotations.Managed;
 import net.serenitybdd.screenplay.abilities.BrowseTheWeb;
 import net.serenitybdd.screenplay.actors.OnStage;
 import net.serenitybdd.screenplay.actors.OnlineCast;
 import org.openqa.selenium.WebDriver;
-import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class Hooks {
     // Esto hace que Serenity maneje automáticamente el navegador
