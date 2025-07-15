@@ -15,7 +15,7 @@ import tasks.Login;
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static org.hamcrest.Matchers.equalTo;
 
-git
+
 public class LoginStepDefinitions {
 
         @Managed(driver = "chrome")

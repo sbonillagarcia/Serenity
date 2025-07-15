@@ -108,7 +108,7 @@
         <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
         <div id="projectname-banner" style="float:right">
             <span class="projectname">
-                <span class="projecttitle">Serenity and Cucumber Quick Start</span>
+                <span class="projecttitle">Serenity BDD Report</span>
                 <span class="projectsubtitle"></span>
             </span>
         </div>
@@ -144,7 +144,7 @@
             <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="bi bi-chat-text"></i> Features</a>
         </li>
     </ul>
-    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 14-07-2025 14:57</span>
+    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 14-07-2025 21:58</span>
     <br style="clear:left"/>
 </div>
     <div class="clr"></div>
@@ -170,11 +170,11 @@
                                     <span class="badge example-tag tag-badge" style="background:default;">
                                     <i class="bi bi-tag-fill"></i>&nbsp;
                                         <a class="tagLink" style="background:default;"
-                                           href="2a5b6a7be0f08df02d8ab0b4d4c68648c2695c6c7ef0658c71de4d42b1415b18.html">Under 1 Second
+                                           href="34658a1663fcf042bd7acb3325affbe4e647c8acd84d0228be2f52e1381e61b9.html">10 To 30 Seconds
                                               (Duration)
                                         </a>
                                 </span>
-                                    
+                                    <span class='context-icon'><i class='bi bi-browser-chrome' title='Chrome'></i> <i class='bi bi-windows' title='Windows'></i></span>
                             </p>
                         </td>
                     </tr>
@@ -184,9 +184,9 @@
                 <table class="outcome-header">
                     <tr>
                         <td colspan="2" class="test-title-bar">
-                            <span class="outcome-icon"><a href='##beforetable'><i class='bi bi-x-circle-fill failure-icon fa-2x' title='FAILURE'></i></a></span>
+                            <span class="outcome-icon"><a href='##beforetable'><i class='bi bi-exclamation-triangle-fill error-icon fa-2x' title='ERROR'></i></a></span>
                             <span class="test-case-title">
-                                <span class="failing-color">
+                                <span class="error-color">
                                     Login exitoso
                                         <span class="related-issue-title"></span>
                                 </span>
@@ -261,6 +261,7 @@
                     Steps
                 </th>
 
+                    <th width="150" class="greentext">Screenshots</th>
                 <th width="130" class="greentext">Outcome</th>
                 <th width="100" class="greentext"><i title="Duration" class="bi bi-stopwatch"></i></th>
             </tr>
@@ -287,16 +288,25 @@
                         </div>
                     </td>
 
+                        <td width="160" class="SUCCESS-text">
+
+                                <a href="2ea5b33664c33a04ef82894bc09aaca1d7efaaeb7fc4a6b7588ee098857e91f0_screenshots.html#screenshots?screenshot=0">
+                                    <img src="3ddd2db643aad3dedd52bc78641560a453d2ff59d5691c920e2527282c977121.png"
+                                         href="3ddd2db643aad3dedd52bc78641560a453d2ff59d5691c920e2527282c977121.png"
+                                         class="screenshot"
+                                         width="48" height="48"/>
+                                </a>
+                        </td>
                     <td width="130"><span class="top-level-step">SUCCESS</span></td>
-                    <td width="100"><span class="top-level-step">176ms</span></td>
+                    <td width="100"><span class="top-level-step">6s 862ms</span></td>
                 </tr>
-                <tr class="test-SUCCESS">
+                <tr class="test-ERROR">
 
                     <td width="50" class="step-icon">
                         <a name="1"></a>
                             <a href="javaScript:void(0)" onClick="toggleDiv('stepSection1')"
                                style="display:block">
-                                <i class="bi bi-caret-right-square imgstepSection1 success-icon"
+                                <i class="bi bi-caret-right-square imgstepSection1 error-icon"
                                    style="margin-left: 20px; float:left; padding-right:5px"></i>
                             </a>
                     </td>
@@ -314,19 +324,28 @@
                         </div>
                     </td>
 
-                    <td width="130"><span class="top-level-step">SUCCESS</span></td>
-                    <td width="100"><span class="top-level-step">433ms</span></td>
+                        <td width="160" class="ERROR-text">
+
+                                <a href="2ea5b33664c33a04ef82894bc09aaca1d7efaaeb7fc4a6b7588ee098857e91f0_screenshots.html#screenshots?screenshot=3">
+                                    <img src="81ca1070ed7c120b76210f8737f5ec1a81b566c4af166b60be036b66a63ed1ce.png"
+                                         href="81ca1070ed7c120b76210f8737f5ec1a81b566c4af166b60be036b66a63ed1ce.png"
+                                         class="screenshot"
+                                         width="48" height="48"/>
+                                </a>
+                        </td>
+                    <td width="130"><span class="top-level-step">ERROR</span></td>
+                    <td width="100"><span class="top-level-step"></span></td>
                 </tr>
                     <tr>
                         <td colspan="5">
                             <table id="stepSection1" class="step-table-nested" style="display:none;">
-                <tr class="test-SUCCESS">
+                <tr class="test-ERROR">
 
                     <td width="70" class="step-icon">
                         <a name="1-0"></a>
                             <a href="javaScript:void(0)" onClick="toggleDiv('stepSection1-0')"
                                style="display:block">
-                                <i class="bi bi-caret-right-square imgstepSection1-0 success-icon"
+                                <i class="bi bi-caret-right-square imgstepSection1-0 error-icon"
                                    style="margin-left: 40px; float:left; padding-right:5px"></i>
                             </a>
                     </td>
@@ -344,18 +363,27 @@
                         </div>
                     </td>
 
-                    <td width="130"><span class="nested-step">SUCCESS</span></td>
-                    <td width="100"><span class="nested-step">307ms</span></td>
+                        <td width="160" class="ERROR-text">
+
+                                <a href="2ea5b33664c33a04ef82894bc09aaca1d7efaaeb7fc4a6b7588ee098857e91f0_screenshots.html#screenshots?screenshot=3">
+                                    <img src="81ca1070ed7c120b76210f8737f5ec1a81b566c4af166b60be036b66a63ed1ce.png"
+                                         href="81ca1070ed7c120b76210f8737f5ec1a81b566c4af166b60be036b66a63ed1ce.png"
+                                         class="screenshot"
+                                         width="48" height="48"/>
+                                </a>
+                        </td>
+                    <td width="130"><span class="nested-step">ERROR</span></td>
+                    <td width="100"><span class="nested-step"></span></td>
                 </tr>
                     <tr>
                         <td colspan="5">
                             <table id="stepSection1-0" class="step-table-nested" style="display:none;">
-                <tr class="test-SUCCESS">
+                <tr class="test-ERROR">
 
                     <td width="90" class="step-icon">
                         <a name="1-0-0"></a>
                             <span style="margin-left: 60px;"
-                                  class="nested-group-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a>
+                                  class="nested-group-icon"><a href='##beforetable'><i class='bi bi-exclamation-triangle-fill error-icon ' title='ERROR'></i></a>
                                 </span>
                     </td>
 
@@ -369,126 +397,31 @@
                         </div>
                     </td>
 
-                    <td width="130"><span class="nested-group-step">SUCCESS</span></td>
-                    <td width="100"><span class="nested-group-step">131ms</span></td>
-                </tr>
-                <tr class="test-SUCCESS">
+                        <td width="160" class="ERROR-text">
 
-                    <td width="90" class="step-icon">
-                        <a name="1-0-1"></a>
-                            <span style="margin-left: 60px;"
-                                  class="nested-group-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a>
-                                </span>
-                    </td>
-
-                    <td class="step-description-column">
-                        <div class="step-description">
-                                <span class="nested-group-step">
-                                                User enters 'admin123' into password field
-                                        </span>
-                            <span class="evidence">
-                                </span>
-                        </div>
-                    </td>
-
-                    <td width="130"><span class="nested-group-step">SUCCESS</span></td>
-                    <td width="100"><span class="nested-group-step">049ms</span></td>
-                </tr>
-                <tr class="test-SUCCESS">
-
-                    <td width="90" class="step-icon">
-                        <a name="1-0-2"></a>
-                            <span style="margin-left: 60px;"
-                                  class="nested-group-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a>
-                                </span>
-                    </td>
-
-                    <td class="step-description-column">
-                        <div class="step-description">
-                                <span class="nested-group-step">
-                                                User clicks on login button
-                                        </span>
-                            <span class="evidence">
-                                </span>
-                        </div>
-                    </td>
-
-                    <td width="130"><span class="nested-group-step">SUCCESS</span></td>
-                    <td width="100"><span class="nested-group-step">055ms</span></td>
-                </tr>
-
-                            </table>
+                                <a href="2ea5b33664c33a04ef82894bc09aaca1d7efaaeb7fc4a6b7588ee098857e91f0_screenshots.html#screenshots?screenshot=3">
+                                    <img src="81ca1070ed7c120b76210f8737f5ec1a81b566c4af166b60be036b66a63ed1ce.png"
+                                         href="81ca1070ed7c120b76210f8737f5ec1a81b566c4af166b60be036b66a63ed1ce.png"
+                                         class="screenshot"
+                                         width="48" height="48"/>
+                                </a>
                         </td>
-                    </tr>
-
-                            </table>
-                        </td>
-                    </tr>
-                <tr class="test-FAILURE">
-
-                    <td width="50" class="step-icon">
-                        <a name="2"></a>
-                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection2')"
-                               style="display:block">
-                                <i class="bi bi-caret-right-square imgstepSection2 failure-icon"
-                                   style="margin-left: 20px; float:left; padding-right:5px"></i>
-                            </a>
-                    </td>
-
-                    <td class="step-description-column">
-                        <div class="step-description">
-                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection2')"
-                               style="display:block;">
-                                <span class="top-level-step">
-                                                Then they should be redirected to the dashboard
-                                        </span>
-                            </a>
-                            <span class="evidence">
-                                </span>
-                        </div>
-                    </td>
-
-                    <td width="130"><span class="top-level-step">FAILURE</span></td>
-                    <td width="100"><span class="top-level-step">186ms</span></td>
+                    <td width="130"><span class="nested-group-step">ERROR</span></td>
+                    <td width="100"><span class="nested-group-step">3s 607ms</span></td>
                 </tr>
-                    <tr>
-                        <td colspan="5">
-                            <table id="stepSection2" class="step-table-nested" style="display:none;">
-                <tr class="test-FAILURE">
-
-                    <td width="70" class="step-icon">
-                        <a name="2-0"></a>
-                            <span style="margin-left: 40px;"
-                                  class="nested-group-icon"><a href='##beforetable'><i class='bi bi-x-circle-fill failure-icon ' title='FAILURE'></i></a>
-                                </span>
-                    </td>
-
-                    <td class="step-description-column">
-                        <div class="step-description">
-                                <span class="nested-group-step">
-                                                Then login result$$ lambda$733/0x000002ab81408408 should be 'Welcome!'
-                                        </span>
-                            <span class="evidence">
-                                </span>
-                        </div>
-                    </td>
-
-                    <td width="130"><span class="nested-group-step">FAILURE</span></td>
-                    <td width="100"><span class="nested-group-step">047ms</span></td>
-                </tr>
-                    <tr class="test-FAILURE">
+                    <tr class="test-ERROR">
                         <td width="40">&nbsp</td>
-                        <td width="%" colspan="3" class="error-message-cell">
+                        <td width="%" colspan="4" class="error-message-cell">
 
 
     <div style="display:block">
         <div class="table">
             <div class="row">
                 <div class="col-sm-10" style="padding-left:1.5em; padding-top:0.5em; padding-bottom:0.5em;">
-                    <span class="error-message error-message-title">java.lang.AssertionError: <br>Expected: &quot;Welcome!&quot;<br>     but: was &quot;&quot;</span>
+                    <span class="error-message error-message-title">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#username&quot;}<br>  (Session info: chrome=138.0.7204.101)<br>For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception<br>Build info: version: &#39;4.21.0&#39;, revision: &#39;79ed462ef4&#39;<br>System info: os.name: &#39;Windows 11&#39;, os.arch: &#39;amd64&#39;, os.version: &#39;10.0&#39;, java.version: &#39;17.0.11&#39;<br>Driver info: org.openqa.selenium.chrome.ChromeDriver<br>Command: [32c0fa5df49ade021beff3b5f7837ea8, findElement {value=username, using=id}]<br>Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 138.0.7204.101, chrome: {chromedriverVersion: 138.0.7204.94 (545025748884..., userDataDir: C:\Users\sboni\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57587}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57587/devtoo..., se:cdpVersion: 138.0.7204.101, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}<br>Session ID: 32c0fa5df49ade021beff3b5f7837ea8</span>
                 </div>
                 <div class="col-sm-2">
-                    <a class="btn btn-warning details-button" data-toggle="collapse" href="#stacktraceModal-8"
+                    <a class="btn btn-warning details-button" data-toggle="collapse" href="#stacktraceModal-4"
                        role="button" aria-expanded="false" aria-controls="multiCollapseExample1"><i class="bi bi-eye"></i> More details</a>
                 </div>
              </div>
@@ -498,14 +431,14 @@
     <!-- Details Section -->
     <div class="row stacktrace-details">
       <div class="col">
-        <div class="collapse multi-collapse" id="stacktraceModal-8">
+        <div class="collapse multi-collapse" id="stacktraceModal-4">
             <div class="card">
                 <div class="card-header">
-                    <h4>java.lang.AssertionError </h4>
+                    <h4>org.openqa.selenium.NoSuchElementException </h4>
                 </div>
                 <div class="card-body">
                     <div>
-                        <pre>stepdef.LoginStepDefinitions.theyShouldBeRedirectedToTheDashboard(LoginStepDefinitions.java:32)<br />worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)<br />worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)<br /></pre>
+                        <pre>tasks.Login.performAs(Login.java:22)<br />stepdef.LoginStepDefinitions.theyEnterValidcredentials(LoginStepDefinitions.java:38)<br />worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)<br />worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)<br /></pre>
                     </div>
 
                 </div>
@@ -514,14 +447,43 @@
     </div>
                         </td>
                     </tr>
+                <tr class="test-SKIPPED">
+
+                    <td width="90" class="step-icon">
+                        <a name="1-0-1"></a>
+                            <span style="margin-left: 60px;"
+                                  class="nested-group-icon"><a href='##beforetable'><i class='bi bi-skip-forward skipped-icon ' title='SKIPPED'></i></a>
+                                </span>
+                    </td>
+
+                    <td class="step-description-column">
+                        <div class="step-description">
+                                <span class="nested-group-step">
+                                                Then they should be redirected to the dashboard
+                                        </span>
+                            <span class="evidence">
+                                </span>
+                        </div>
+                    </td>
+
+                        <td width="160" class="SKIPPED-text">
+
+                        </td>
+                    <td width="130"><span class="nested-group-step">SKIPPED</span></td>
+                    <td width="100"><span class="nested-group-step"></span></td>
+                </tr>
 
                             </table>
                         </td>
                     </tr>
-            <tr class="test-FAILURE">
-                    <td colspan="2"></td>
-                <td width="130"><span class="top-level-step"><em>FAILURE</em></span></td>
-                <td width="100"><span class="top-level-step"><em>0.89s</em></span></td>
+
+                            </table>
+                        </td>
+                    </tr>
+            <tr class="test-ERROR">
+                    <td colspan="3"></td>
+                <td width="130"><span class="top-level-step"><em>ERROR</em></span></td>
+                <td width="100"><span class="top-level-step"><em>11.29s</em></span></td>
             </tr>
 
         </table>
