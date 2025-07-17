@@ -27,17 +27,16 @@ public class Login implements Task {
     }
 
     /**
-     * Permite usar el Login con un objeto Credentials.
+     * Login con un objeto Credentials (modelo).
      */
     public static Login withCredentials(Credentials credentials) {
         return instrumented(Login.class, credentials);
     }
 
     /**
-     * Permite usar el Login directamente con usuario y contraseña.
+     * Login con valores directos (para mayor flexibilidad si no se usa modelo).
      */
     public static Login withCredentials(String username, String password) {
         return instrumented(Login.class, new Credentials(username, password));
     }
 }
-
