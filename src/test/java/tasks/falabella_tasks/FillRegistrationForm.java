@@ -16,8 +16,12 @@ public class FillRegistrationForm implements Task {
     @Override
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(
-                Open.browserOn().the(RegistrationPage.class)
         );
+
+
+
+
+
 
     }
 }
