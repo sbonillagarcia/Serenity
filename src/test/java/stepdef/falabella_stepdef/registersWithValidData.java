@@ -1,5 +1,6 @@
 package stepdef.falabella_stepdef;
 
+import io.cucumber.datatable.DataTable;
 import io.cucumber.java.Before;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -10,6 +11,9 @@ import net.serenitybdd.screenplay.actors.OnStage;
 import net.serenitybdd.screenplay.actors.OnlineCast;
 import org.openqa.selenium.WebDriver;
 import tasks.falabella_tasks.FillRegistrationForm;
+import tasks.falabella_tasks.Register;
+
+import java.util.Map;
 
 public class registersWithValidData {
 
@@ -30,9 +34,11 @@ public class registersWithValidData {
     }
 
     @When("the user registers with valid data:")
-    public void the_user_registers_with_valid_data(io.cucumber.datatable.DataTable dataTable) {
-        // Write code here that turns the phrase above into concrete actions
+    public void the_user_registers_with_valid_data(DataTable dataTable) {
+        Map<String, String> userData = dataTable.asMap(String.class, String.class);
 
+        OnStage.theActorInTheSpotlight().attemptsTo(
+                Register.withData(data);
 
     }
 
