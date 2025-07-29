@@ -5,6 +5,7 @@ import io.cucumber.java.Before;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import models.falabella_models.UserData;
 import net.serenitybdd.annotations.Managed;
 import net.serenitybdd.screenplay.abilities.BrowseTheWeb;
 import net.serenitybdd.screenplay.actors.OnStage;
@@ -37,9 +38,20 @@ public class registersWithValidData {
     public void the_user_registers_with_valid_data(DataTable dataTable) {
         Map<String, String> userData = dataTable.asMap(String.class, String.class);
 
-        OnStage.theActorInTheSpotlight().attemptsTo(
-                Register.withData(data);
+        UserData user = new UserData(
+                userData.get("firstName"),
+                userData.get("lastName"),
+                userData.get("email"),
+                userData.get("idType"),
+                userData.get("idNumber"),
+                userData.get("confirmId"),
+                userData.get("phoneNumber"),
+                userData.get("password")
+        );
 
+        OnStage.theActorInTheSpotlight().attemptsTo(
+                Register.withData(user)
+        );
     }
 
     @Then("the user should see the message {string}")
