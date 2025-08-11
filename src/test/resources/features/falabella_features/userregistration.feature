@@ -8,18 +8,23 @@ Feature: user registration
     Given the user opens the registration page
     When the user registers with valid data:
 
-      | firstName    | <firstName>    |
-      | lastName     | <lastName>     |
-      | email        | <email>        |
-      | password     | <password>     |
-      | confirmPass  | <confirmPass>  |
-      | acceptTOS    | <acceptTOS>    |
+      | firstName | <firstName> |
+      | lastName  | <lastName>  |
+      | email     | <email>     |
+      | idType    | <idType>    |
+      | idNumber  | <idNumber>  |
+      | confirmId | <confirmId> |
+      | phoneN    | <phoneN>    |
+      | password  | <password>  |
+      | acceptTOS | <acceptTOS> |
+      | terms     | <terms>     |
+
 
     Then the user should see the message "<expectedMessage>"
 
     Examples:
-      | firstName | lastName | email               | password    | confirmPass  | acceptTOS | expectedMessage               |
-      | Juan      | Pérez    | juan.perez@mail.com | Passw0rd!   | Passw0rd!    | true      | Registro exitoso              |
-      | María     | Gómez    | maria.gomez@mail.co | S3gur0_Pass | S3gur0_Pass  | true      | Registro exitoso              |
+
+      | firstName | lastName | email                | idType | idNumber   | confirmId  | phoneN     | password   | acceptTOS | terms | expectedMessage                        |
+      | sbonilla  | prueba   | miydukirte@necub.com | CC     | 1022222222 | 1022222222 | 3113333333 | Prueba+123 | true      | true  | Te damos la bienvenida a falabella.com |
 
 
