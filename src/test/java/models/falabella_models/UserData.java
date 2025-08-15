@@ -12,10 +12,8 @@ public class UserData {
     private String confirmPassword;
     private String acceptTOS;
 
-    // Constructor vacío necesario para Cucumber
     public UserData() {}
 
-    // Getters y setters
     public String getFirstName() { return firstName; }
     public void setFirstName(String firstName) { this.firstName = firstName; }
 
