@@ -8,16 +8,16 @@ Feature: user registration
   Scenario: valid registration
     Given the user opens the registration page
     When the user registers with valid data:
-      | firstName       | Sayury               |
-      | lastName        | Test                 |
-      | email           | kardorigne@necub.com |
-      | idType          | CC                   |
-      | idNumber        | 1234567890           |
-      | confirmId       | 1234567890           |
-      | phoneNumber     | 3216549870           |
-      | password        | Passw0rd!            |
-      | confirmPassword | Passw0rd!            |
-      | acceptTOS       | true                 |
+      | firstName   | Sayury                        |
+      | lastName    | Test                          |
+      | email       | mecanico.centro1987@gmail.com |
+     # | idType      | CC                   |
+      | idNumber    | 1234567890                    |
+      | confirmId   | 1234567890                    |
+      | phoneNumber | 3216549870                    |
+      | password    | Passw0rd!                     |
+      | acceptTOS   | true                          |
+      | terms       | true                          |
     Then the user should see the message "Registro exitoso"
 
 

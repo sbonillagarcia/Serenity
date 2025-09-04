@@ -11,19 +11,21 @@ import static net.serenitybdd.screenplay.Tasks.instrumented;
 public class WaitForElement implements Interaction {
 
     private final Target target;
+    private final int timeout;
 
-    public WaitForElement(Target target) {
+    public WaitForElement(Target target, int timeout) {
         this.target = target;
+        this.timeout  = timeout ;
     }
 
     @Override
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(
-                WaitUntil.the(target, isVisible()).forNoMoreThan(10).seconds()
+                WaitUntil.the(target, isVisible()).forNoMoreThan(timeout).seconds()
         );
     }
 
-    public static WaitForElement toBeVisible(Target target) {
-        return instrumented(WaitForElement.class, target);
+    public static WaitForElement toBeVisible(Target target, int timeout) {
+        return instrumented(WaitForElement.class, target, timeout);
     }
 }

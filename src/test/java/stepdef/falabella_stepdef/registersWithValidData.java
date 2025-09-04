@@ -4,14 +4,14 @@ import io.cucumber.java.Before;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import models.falabella_models.UserData;
 import net.serenitybdd.annotations.Managed;
 import net.serenitybdd.screenplay.abilities.BrowseTheWeb;
 import net.serenitybdd.screenplay.actors.OnStage;
 import net.serenitybdd.screenplay.actors.OnlineCast;
 import org.openqa.selenium.WebDriver;
 import questions.falabella_questions.RegistrationMessage;
-import tasks.falabella_tasks.FillRegistrationForm;
-import tasks.falabella_tasks.OpenRegistrationPage;
+import tasks.falabella_tasks.*;
 
 
 import java.util.Map;
@@ -20,6 +20,7 @@ import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static org.hamcrest.CoreMatchers.containsString;
 
 public class registersWithValidData {
+
 
     @Managed(driver = "chrome")
     WebDriver driver;
@@ -41,12 +42,34 @@ public class registersWithValidData {
 
     @When("the user registers with valid data:")
     public void the_user_registers_with_valid_data(io.cucumber.datatable.DataTable dataTable) {
-        // 📋 Convertimos la DataTable de Cucumber a un Map<String, String>
+
+        // Convertimos la DataTable a Map<String, String>
         Map<String, String> data = dataTable.asMap(String.class, String.class);
 
-        // 📝 Llenamos el formulario de registro usando la Task
+        String randomEmail = "yifyedofya" + System.currentTimeMillis() + "@necub.com";
+
+        UserData userData = new UserData(
+                data.get("firstName"),
+                data.get("lastName"),
+                data.get("email"),
+                //randomEmail, --En caso de uno estático
+               // data.get("idType"),
+                data.get("idNumber"),
+                data.get("confirmId"),
+                data.get("phoneNumber"),
+                data.get("password"),
+                Boolean.parseBoolean(data.get("acceptTOS")),
+                Boolean.parseBoolean(data.get("terms"))
+        );
+
+
+        // 🎭 Ejecutamos las Tasks en Screenplay
         OnStage.theActorInTheSpotlight().attemptsTo(
-                FillRegistrationForm.withData(data)
+                EnterContactInformation.withData(userData),
+                EnterPersonalInformation.withData(userData),
+                EnterCredentials.withData(userData),
+                AcceptTermsAndConditions.withData(userData),
+                SubmitRegistration.withData()
         );
     }
 
