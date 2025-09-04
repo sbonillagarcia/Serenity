@@ -61,6 +61,10 @@ test {
 }
 
 // Ejecutar aggregate incluso si test falla
-test.finalizedBy(aggregate)
+//test.finalizedBy(aggregate)
+
+test {
+    systemProperty "cucumber.filter.tags", System.getProperty("cucumber.filter.tags")
+}
 
 gradle.startParameter.continueOnFailure = true
