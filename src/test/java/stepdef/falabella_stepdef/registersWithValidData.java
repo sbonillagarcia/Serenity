@@ -1,6 +1,7 @@
 package stepdef.falabella_stepdef;
 
 import io.cucumber.java.Before;
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -53,7 +54,7 @@ public class registersWithValidData {
                 data.get("lastName"),
                 data.get("email"),
                 //randomEmail, --En caso de uno estático
-               // data.get("idType"),
+               // data.get("idType"), nunca lo uso.
                 data.get("idNumber"),
                 data.get("confirmId"),
                 data.get("phoneNumber"),
@@ -70,6 +71,13 @@ public class registersWithValidData {
                 EnterCredentials.withData(userData),
                 AcceptTermsAndConditions.withData(userData),
                 SubmitRegistration.withData()
+        );
+    }
+
+    @And("the email validation message is displayed in the OTP modal")
+    public void the_email_validation_message_is_displayed_in_the_OTP_modal(){
+        OnStage.theActorInTheSpotlight().attemptsTo(
+                EnterOTPInnformation.code("244444")
         );
     }
 

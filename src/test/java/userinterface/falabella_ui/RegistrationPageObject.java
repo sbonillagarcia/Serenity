@@ -51,5 +51,10 @@ public class RegistrationPageObject {
             .located(By.xpath("//button[contains(text(),'Regístrate')]"));
 
     public static final Target REGISTRATION_MESSAGE = Target.the("Registration success message")
-            .located(By.xpath("//h3[contains(.,'¡Hola!')] | //div[contains(.,'Registro exitoso')]"));
+            .located(By.xpath("//p[contains(text(),'Solo falta validar tu correo')]"));
+
+    public static final Target OTP_INPUTS = Target.the("OTP inputs")
+            .locatedBy("input.chakra-pin-input");
+
+
 }

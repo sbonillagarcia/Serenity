@@ -18,6 +18,7 @@ Feature: user registration
       | password    | Passw0rd!                     |
       | acceptTOS   | true                          |
       | terms       | true                          |
+    And the email validation message is displayed in the OTP modal
     Then the user should see the message "Registro exitoso"
 
 
