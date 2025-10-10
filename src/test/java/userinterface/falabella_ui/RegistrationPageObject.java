@@ -1,5 +1,6 @@
 package userinterface.falabella_ui;
 
+import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.targets.Target;
 import org.openqa.selenium.By;
 
@@ -55,6 +56,13 @@ public class RegistrationPageObject {
 
     public static final Target OTP_INPUTS = Target.the("OTP inputs")
             .locatedBy("input.chakra-pin-input");
+
+    public static final Target SUBMIT_OTP = Target.the("Validate and create account button")
+            .located(By.xpath("//button[contains(text(),'Validar y crear cuenta')]"));
+
+    public static final Target WELCOME_MESSAGE = Target.the("Welcome message")
+            .located(By.xpath("//*[contains(text(),'Te damos la bienvenida a Falabella')]"));
+
 
 
 }

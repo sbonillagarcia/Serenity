@@ -77,7 +77,9 @@ public class registersWithValidData {
     @And("the email validation message is displayed in the OTP modal")
     public void the_email_validation_message_is_displayed_in_the_OTP_modal(){
         OnStage.theActorInTheSpotlight().attemptsTo(
-                EnterOTPInnformation.code("244444")
+                EnterOTPInnformation.code("244444"),
+                SubmitOtpCreate.code()
+
         );
     }
 

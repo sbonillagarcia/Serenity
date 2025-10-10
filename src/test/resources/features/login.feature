@@ -4,7 +4,7 @@ Feature: Login
 
     Given the user opens the login page
     When they enter valid credentials
-      | username | admin    |
-      | password | admin123 |
+      | username | lapsijerte@necub.com |
+      | password | Passw0rd!            |
     Then they should be redirected to the dashboard
 
